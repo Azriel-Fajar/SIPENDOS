@@ -1,0 +1,25 @@
+table asisten_dosen tidak perlu
+
+nidn dosen ganti kode_dosen
+
+data asisten masukkan ke table dosen (68901-68910)
+
+table fakultas tambah kode fakultas (enum)
+
+table prodi tambah id_prodi (AI)
+
+table dosen colum kode_prodi ganti id_prodi
+
+table makeup_class tidak dipakai
+
+table mata_kuliah column semester_penawaran dihapus
+tambah sks_total
+ganti kode_prodi ke id_prodi
+
+table jadwal tambah bidang_minat
+ubah dosennya jadi id_dosen_1-4
+hapus jumlah_pertemuan
+
+table ruang hapus status
+
+bikin table baru status_ruang
