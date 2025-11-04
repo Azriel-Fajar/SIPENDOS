@@ -6,7 +6,7 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>{{ $title }} | {{ config('app.name', 'Azriel') }}</title>
+    <title>{{ $title }} | {{ config('app.name', 'PENDUS') }}</title>
     <link rel="stylesheet" href="/css/login.css" />
     <link rel="icon" href="/IMG/Logo.png" />
     <meta name="csrf-token" content="{{ csrf_token() }}">
