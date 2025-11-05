@@ -90,6 +90,7 @@
 
 .sidebar .container .nav-menu ul li.dropdown ul li a {
   padding: 10px 30px;
+  font-size: 0.9rem;
 }
 
 .sidebar .container .nav-menu ul li #master-button.active {
