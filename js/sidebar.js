@@ -12,9 +12,11 @@ navButtons.forEach((button) => {
     // Add active class to the clicked button
     this.classList.add("active");
     dropContent.classList.remove("show");
+    dropContent.setAttribute("inert", "");
   });
 });
 
 dropBtn.addEventListener("click", function () {
   dropContent.classList.toggle("show");
+  dropContent.removeAttribute("inert");
 });

@@ -79,6 +79,7 @@
 .sidebar .container .nav-menu ul li a .down {
   position: absolute;
   right: 20px;
+  transition: 0.1s ease;
 }
 
 /* Dropdown */
@@ -97,6 +98,10 @@
 
 .sidebar .container .nav-menu ul li #master-button.active {
   background-color: rgb(255, 255, 255, 0.15);
+}
+
+.sidebar .container .nav-menu ul li #master-button.active .down {
+  transform: rotate(180deg);
 }
 
 .sidebar .container .nav-menu ul li.dropdown.show {
