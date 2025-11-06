@@ -96,6 +96,10 @@
   font-size: 0.9rem;
 }
 
+.sidebar .container .nav-menu ul li.dropdown ul li a:hover {
+  background-color: rgb(255, 255, 255, 0.05);
+}
+
 .sidebar .container .nav-menu ul li #master-button.active {
   background-color: rgb(255, 255, 255, 0.15);
 }
