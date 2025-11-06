@@ -16,7 +16,7 @@ return new class extends Migration
             $table->string('username', 50);
             $table->string('password_hash');
             $table->string('nama_admin', 50)->default('Administrator');
-            $table->tinyInteger('status_aktif');
+            $table->tinyInteger('status_aktif')->default(1);
             $table->timestamp('last_login')->nullable();
         });
 

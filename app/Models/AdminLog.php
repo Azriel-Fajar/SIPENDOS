@@ -12,6 +12,8 @@ class AdminLog extends Model
 
     protected $table = 'admin_log';
     protected $primaryKey = 'id_log';
+    const CREATED_AT = 'waktu';
+    const UPDATED_AT = null;
 
     protected $fillable = [
         'aksi',
