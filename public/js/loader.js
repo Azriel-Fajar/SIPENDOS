@@ -6,6 +6,11 @@ window.addEventListener("load", () => {
     loader.classList.add("hidden");
 });
 
+// Saat halaman ditampilkan (termasuk dari cache)
+window.addEventListener("pageshow", () => {
+    loader.classList.add("hidden");
+});
+
 // Saat user berpindah halaman
 window.addEventListener("beforeunload", () => {
     loader.classList.remove("hidden");

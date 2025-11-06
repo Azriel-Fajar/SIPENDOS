@@ -19,3 +19,7 @@ Route::get('/master/prodi', [MasterDataController::class, 'prodi'])->name('prodi
 Route::get('/master/tahun-akademik', [MasterDataController::class, 'tahunAkademik'])->name('tahunAkademik');
 
 Route::get('/login', [LoginController::class, 'showLoginForm'])->name('login');
+
+Route::fallback(function() {
+    return view('fallback');
+});
