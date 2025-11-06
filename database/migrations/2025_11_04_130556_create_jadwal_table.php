@@ -28,8 +28,8 @@ return new class extends Migration
             $table->foreignId('id_dosen_3')->constrained('dosen', 'id_dosen');
             $table->foreignId('id_dosen_4')->constrained('dosen', 'id_dosen');
             $table->enum('status_jadwal', ['Aktif', 'Pending', 'Revisi', 'Bentrok'])->default('Aktif');
-            $table->timestamp('tanggal_dibuat')->useCurrent();
-            $table->timestamp('tanggal_update')->useCurrent()->useCurrentOnUpdate();
+            $table->timestamps();
+            $table->timestamp('deleted_at')->nullable();
         });
     }
 
