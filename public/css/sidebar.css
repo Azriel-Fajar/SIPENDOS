@@ -1,0 +1,116 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap");
+
+.sidebar {
+    width: 100%;
+    height: 100%;
+    background-color: #131315;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.25);
+}
+
+.sidebar .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.sidebar .container .logo-container {
+    width: 100%;
+    height: 100px;
+    display: grid;
+    place-items: center;
+}
+
+.sidebar .container .logo-container a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+}
+
+.sidebar .container .logo-container a img {
+    height: 50px;
+    width: auto;
+}
+
+.sidebar .container .devider {
+    background-color: rgb(255, 255, 255, 0.75);
+    height: 2px;
+    width: 100%;
+}
+
+.sidebar .container .nav-menu {
+    width: 100%;
+    flex-grow: 1;
+}
+
+.sidebar .container .nav-menu ul {
+    list-style: none;
+    width: 100%;
+}
+
+.sidebar .container .nav-menu ul li {
+    width: 100%;
+}
+
+.sidebar .container .nav-menu ul li a {
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding: 15px 15px;
+    gap: 10px;
+    text-decoration: none;
+    color: #ffffff;
+    fill: #ffffff;
+    font-family: "Open Sans", sans-serif;
+    font-weight: 700;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.sidebar .container .nav-menu ul li a svg {
+    fill: #ffffff;
+}
+
+.sidebar .container .nav-menu ul li a:hover,
+.sidebar .container .nav-menu ul li a.active {
+    background-color: rgb(255, 255, 255, 0.1);
+}
+
+.sidebar .container .nav-menu ul li a .down {
+    position: absolute;
+    right: 20px;
+    transition: 0.1s ease;
+}
+
+/* Dropdown */
+
+.sidebar .container .nav-menu ul li.dropdown {
+    opacity: 0;
+    background-color: transparent;
+    transition: 0.1s ease;
+    margin-top: -10px;
+}
+
+.sidebar .container .nav-menu ul li.dropdown ul li a {
+    padding: 10px 30px;
+    font-size: 0.9rem;
+}
+
+.sidebar .container .nav-menu ul li.dropdown ul li a:hover,
+.sidebar .container .nav-menu ul li.dropdown ul li a.active {
+    background-color: rgb(255, 255, 255, 0.05);
+}
+
+.sidebar .container .nav-menu ul li #master-button.active {
+    background-color: rgb(255, 255, 255, 0.15);
+}
+
+.sidebar .container .nav-menu ul li #master-button.active .down {
+    transform: rotate(180deg);
+}
+
+.sidebar .container .nav-menu ul li.dropdown.show {
+    opacity: 1;
+    margin-top: 0;
+    background-color: rgb(255, 255, 255, 0.1);
+}
