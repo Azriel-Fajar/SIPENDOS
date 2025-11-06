@@ -1,0 +1,188 @@
+@props(['btnClass' => '', 'btnClassDrop' => ''])
+
+<section class="sidebar" id="sidebar">
+    <div class="container">
+        <div class="logo-container">
+            <a href="{{ route('dashboard') }}"><img src="/IMG/Logo Text.png" alt="SIPENDOS LOGO" /></a>
+        </div>
+        <div class="devider"></div>
+        <nav class="nav-menu" id="nav-menu">
+            <ul>
+                <li>
+                    <a href="{{ route('dashboard') }}"
+                        @if (request()->routeIs('dashboard')) class="{{ $btnClass }}" @endif>
+                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                            xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                            <rect width="16" height="16" fill="url(#pattern0_2338_103)" />
+                            <defs>
+                                <pattern id="pattern0_2338_103" patternContentUnits="objectBoundingBox" width="1"
+                                    height="1">
+                                    <use xlink:href="#image0_2338_103" transform="scale(0.0078125)" />
+                                </pattern>
+                                <image id="image0_2338_103" width="128" height="128" preserveAspectRatio="none"
+                                    xlink:href="data:image/png;base64,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" />
+                            </defs>
+                        </svg>
+                        Dashboard
+                    </a>
+                </li>
+                <li>
+                    <a href="{{ route('buatJadwal') }}"
+                        @if (request()->routeIs('buatJadwal')) class="{{ $btnClass }}" @endif>
+                        <svg width="16" height="16" viewBox="0 0 20 20" fill=""
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M8.92857 15.7143H11.0714V11.0714H15.7143V8.92857H11.0714V4.28571H8.92857V8.92857H4.28571V11.0714H8.92857V15.7143ZM2.14286 20C1.55357 20 1.04911 19.7902 0.629464 19.3705C0.209821 18.9509 0 18.4464 0 17.8571V2.14286C0 1.55357 0.209821 1.04911 0.629464 0.629465C1.04911 0.209822 1.55357 0 2.14286 0H17.8571C18.4464 0 18.9509 0.209822 19.3705 0.629465C19.7902 1.04911 20 1.55357 20 2.14286V17.8571C20 18.4464 19.7902 18.9509 19.3705 19.3705C18.9509 19.7902 18.4464 20 17.8571 20H2.14286Z"
+                                fill="white" />
+                        </svg>
+                        Buat Jadwal
+                    </a>
+                </li>
+                <li>
+                    <a href="{{ route('lihatJadwal') }}"
+                        @if (request()->routeIs('lihatJadwal')) class="{{ $btnClass }}" @endif>
+                        <svg width="16" height="18" viewBox="0 0 16 18" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M1.71429 18C1.24286 18 0.839286 17.832 0.503571 17.4961C0.167857 17.1602 0 16.7656 0 16.3125V3.9375C0 3.48437 0.167857 3.08984 0.503571 2.75391C0.839286 2.41797 1.24286 2.25 1.71429 2.25H3.42857V0H5.14286V2.25H10.8571V0H12.5714V2.25H14.2857C14.7571 2.25 15.1607 2.41797 15.4964 2.75391C15.8321 3.08984 16 3.48437 16 3.9375V16.3125C16 16.7656 15.8321 17.1602 15.4964 17.4961C15.1607 17.832 14.7571 18 14.2857 18H1.71429ZM1.71429 16.3125H14.2857V7.875H1.71429V16.3125ZM1.71429 6.1875H14.2857V3.9375H1.71429V6.1875ZM8.005 11.25C7.76357 11.25 7.55952 11.1696 7.39286 11.0088C7.22619 10.848 7.14286 10.6488 7.14286 10.4112C7.14286 10.1735 7.22452 9.97266 7.38786 9.80859C7.55119 9.64453 7.75357 9.5625 7.995 9.5625C8.23643 9.5625 8.44048 9.64289 8.60714 9.80367C8.77381 9.96445 8.85714 10.1637 8.85714 10.4013C8.85714 10.639 8.77548 10.8398 8.61214 11.0039C8.44881 11.168 8.24643 11.25 8.005 11.25ZM4.29071 11.25C4.04929 11.25 3.84524 11.1696 3.67857 11.0088C3.5119 10.848 3.42857 10.6488 3.42857 10.4112C3.42857 10.1735 3.51024 9.97266 3.67357 9.80859C3.83691 9.64453 4.03929 9.5625 4.28071 9.5625C4.52214 9.5625 4.72619 9.64289 4.89286 9.80367C5.05952 9.96445 5.14286 10.1637 5.14286 10.4013C5.14286 10.639 5.06119 10.8398 4.89786 11.0039C4.73452 11.168 4.53214 11.25 4.29071 11.25ZM11.7193 11.25C11.4779 11.25 11.2738 11.1696 11.1071 11.0088C10.9405 10.848 10.8571 10.6488 10.8571 10.4112C10.8571 10.1735 10.9388 9.97266 11.1021 9.80859C11.2655 9.64453 11.4679 9.5625 11.7093 9.5625C11.9507 9.5625 12.1548 9.64289 12.3214 9.80367C12.4881 9.96445 12.5714 10.1637 12.5714 10.4013C12.5714 10.639 12.4898 10.8398 12.3264 11.0039C12.1631 11.168 11.9607 11.25 11.7193 11.25ZM8.005 14.625C7.76357 14.625 7.55952 14.5446 7.39286 14.3838C7.22619 14.223 7.14286 14.0238 7.14286 13.7862C7.14286 13.5485 7.22452 13.3477 7.38786 13.1836C7.55119 13.0195 7.75357 12.9375 7.995 12.9375C8.23643 12.9375 8.44048 13.0179 8.60714 13.1787C8.77381 13.3395 8.85714 13.5387 8.85714 13.7763C8.85714 14.014 8.77548 14.2148 8.61214 14.3789C8.44881 14.543 8.24643 14.625 8.005 14.625ZM4.29071 14.625C4.04929 14.625 3.84524 14.5446 3.67857 14.3838C3.5119 14.223 3.42857 14.0238 3.42857 13.7862C3.42857 13.5485 3.51024 13.3477 3.67357 13.1836C3.83691 13.0195 4.03929 12.9375 4.28071 12.9375C4.52214 12.9375 4.72619 13.0179 4.89286 13.1787C5.05952 13.3395 5.14286 13.5387 5.14286 13.7763C5.14286 14.014 5.06119 14.2148 4.89786 14.3789C4.73452 14.543 4.53214 14.625 4.29071 14.625ZM11.7193 14.625C11.4779 14.625 11.2738 14.5446 11.1071 14.3838C10.9405 14.223 10.8571 14.0238 10.8571 13.7862C10.8571 13.5485 10.9388 13.3477 11.1021 13.1836C11.2655 13.0195 11.4679 12.9375 11.7093 12.9375C11.9507 12.9375 12.1548 13.0179 12.3214 13.1787C12.4881 13.3395 12.5714 13.5387 12.5714 13.7763C12.5714 14.014 12.4898 14.2148 12.3264 14.3789C12.1631 14.543 11.9607 14.625 11.7193 14.625Z"
+                                fill="white" />
+                        </svg>
+                        Lihat Jadwal
+                    </a>
+                </li>
+                <li>
+                    <a href="{{ route('lihatRuang') }}"
+                        @if (request()->routeIs('lihatRuang')) class="{{ $btnClass }}" @endif>
+                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M0 16V14.2857H1.71429V1.71429C1.71429 1.24286 1.88214 0.839286 2.21786 0.503572C2.55357 0.167858 2.95714 0 3.42857 0H12.5714C13.0429 0 13.4464 0.167858 13.7821 0.503572C14.1179 0.839286 14.2857 1.24286 14.2857 1.71429V14.2857H16V16H0ZM9.995 8.57143C10.2364 8.57143 10.4405 8.48976 10.6071 8.32643C10.7738 8.1631 10.8571 7.96071 10.8571 7.71929C10.8571 7.47786 10.7755 7.27381 10.6121 7.10714C10.4488 6.94048 10.2464 6.85714 10.005 6.85714C9.76357 6.85714 9.55952 6.93881 9.39286 7.10214C9.22619 7.26548 9.14286 7.46786 9.14286 7.70929C9.14286 7.95071 9.22452 8.15476 9.38786 8.32143C9.55119 8.4881 9.75357 8.57143 9.995 8.57143Z"
+                                fill="white" />
+                        </svg>
+                        Lihat Ruang
+                    </a>
+                </li>
+                <li>
+                    <a href="{{ route('printJadwal') }}"
+                        @if (request()->routeIs('printJadwal')) class="{{ $btnClass }}" @endif>
+                        <svg width="16" height="14" viewBox="0 0 16 14" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M13 3H3V0H13V3ZM12.7456 7.5C12.9569 7.5 13.1354 7.42854 13.2813 7.28563C13.4271 7.14271 13.5 6.96563 13.5 6.75438C13.5 6.54313 13.4285 6.36458 13.2856 6.21875C13.1427 6.07292 12.9656 6 12.7544 6C12.5431 6 12.3646 6.07146 12.2188 6.21437C12.0729 6.35729 12 6.53438 12 6.74563C12 6.95688 12.0715 7.13542 12.2144 7.28125C12.3573 7.42708 12.5344 7.5 12.7456 7.5ZM11.5 12.5V9.5H4.5V12.5H11.5ZM13 14H3V11H0V6C0 5.44444 0.194444 4.97222 0.583333 4.58333C0.972222 4.19444 1.44444 4 2 4H14C14.5556 4 15.0278 4.19444 15.4167 4.58333C15.8056 4.97222 16 5.44444 16 6V11H13V14Z"
+                                fill="white" />
+                        </svg>
+                        Print Jadwal
+                    </a>
+                </li>
+                <li>
+                    <a id="master-button" @if (request()->routeIs('dosen') ||
+                            request()->routeIs('matakuliah') ||
+                            request()->routeIs('ruang') ||
+                            request()->routeIs('fakultas') ||
+                            request()->routeIs('prodi') ||
+                            request()->routeIs('tahunAkademik')) class="{{ $btnClass }}" @endif>
+                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M0 4.10256H16V0H0V4.10256ZM0 10.0513H16V5.94872H0V10.0513ZM0 16H16V11.8974H0V16ZM1.23077 2.97436V1.12821H3.07692V2.97436H1.23077ZM1.23077 8.92308V7.07692H3.07692V8.92308H1.23077ZM1.23077 14.8718V13.0256H3.07692V14.8718H1.23077Z"
+                                fill="white" />
+                        </svg>
+                        Master Data
+                        <svg class="down" width="14" height="14" viewBox="0 0 16 16" fill="none"
+                            xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                            <rect width="16" height="16" fill="url(#pattern0_2338_97)" />
+                            <defs>
+                                <pattern id="pattern0_2338_97" patternContentUnits="objectBoundingBox" width="1"
+                                    height="1">
+                                    <use xlink:href="#image0_2338_97" transform="scale(0.0078125)" />
+                                </pattern>
+                                <image id="image0_2338_97" width="128" height="128" preserveAspectRatio="none"
+                                    xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAIAAAACACAYAAADDPmHLAAAACXBIWXMAAA7DAAAOwwHHb6hkAAAAGXRFWHRTb2Z0d2FyZQB3d3cuaW5rc2NhcGUub3Jnm+48GgAAA7VJREFUeJzt3cuKHGUAhuGvJmYv4oGI16GgBL0GF2IQ70BXRnIL2bp0ZUZjjGDcBXThgfEi9AJkCJIgwY2iM6+L7tam0p30of6qv7reZzMwh/9Q31fVBT3dnUiSJEmSJEmSJEmSJEmSJEmSJEmSRqZZ9wPgUpLLSS4lIcmvSU6aprnf09q0A+C5zHJ7KbN8T5P81DTNvU0HeAM4Ac551D/AN8DL5bagXQCvAN8CZytyOwd+BF5/3AAXgOsr/niV8/nvHvW4R60ANMC1NcGv8jFwcdUgtzccYNlN4MJAe588ZiftzR1y+wJolgf6cIdBLMGA9gh/4YPFQM8CD/cYCOBL4KmBj8lkzMP/dM/M/gCe3/fsX+aVoAfsf+Yvuxpmd4ddsQQF0W34AD8EuNfhgODDQRF0c9lvOw3wV8eDgleCTtH9mb/w51GSBwXW/E6SW3gl2Nv8RPoks2PatftHSX4uMHCSvJXkhleC3c2P3XGSdwtN8ctRkruFBk9mrT22BNtbCr/Emb9wN8DTwIMCjy/LvDHcAmVu+Np+B55ZTPh+4cnAG8ONUO6Gr+299sTHPUxqCR6D/sK/sW7yWz1M7sPBCvRz2Qf4ivazga1FWIKeUUP4rcVYgp5QU/itRVmCwqgx/NbiLEEh1Bx+a5GWoGOMIfzWYi1BRxhT+K1FW4I9McbwW4u3BDtizOG3NmEJtsQhhN/ajCXYEIcUfmtTluAJOMTwW5uzBGtwyOG3NmkJWphC+K3NWoI5phT+ApYgyUTDX2DiJWDK4S8w0RJg+P9jYiXA8B/FREqA4a/HgZcAw38yDrQEGP7mOLASYPjb40BKgOHvjpGXAMPfHyMtAYbfHUZWAgy/e4ykBPQX/h2mEv4ClZcAwy+PSkuA4feHykqA4fePSkqA4Q+HgUuA4Q+PgUqA4deDnkvAxMNf+5ExQ5ofqNtJ3iw81efzryXfii1J7iS50jTN34Xn2VqVBUj+e5+8z5JcGXote/o6yds1hp9UXIDkIEpQdfhJ5QVIRl2C6sMfDfq7MexKlTd8o8Z4SmD4pVB/CQy/NOotgeH3hfpKYPh9o54SGP5QGL4Ehj+0AUtg+LUYoASGX5seS2D4teqhBIZfu4IlMPyxKFACwx+bDktg+GPVQQkMf+yAi8xed7et6bxW79DNrwTXtwj/I/x8w8MDvAZ8D5ytCP0M+A54deh19qn6fwkrAXghyeUkL86/dZrkpGma34ZblSRJkiRJkiRJkiRJkiRJkiRJkiRJG/kXAzRc0NWiYbEAAAAASUVORK5CYII=" />
+                            </defs>
+                        </svg>
+                    </a>
+                </li>
+                <li class="dropdown @if (request()->routeIs('dosen') ||
+                        request()->routeIs('matakuliah') ||
+                        request()->routeIs('ruang') ||
+                        request()->routeIs('fakultas') ||
+                        request()->routeIs('prodi') ||
+                        request()->routeIs('tahunAkademik')) {{ $btnClassDrop }} @endif">
+                    <ul>
+                        <li>
+                            <a href="{{ route('dosen') }}"
+                                @if (request()->routeIs('dosen')) class="{{ $btnClass }}" @endif>
+                                <svg width="15" height="15" viewBox="0 0 16 16" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M8 8C6.88889 8 5.94444 7.61111 5.16667 6.83333C4.38889 6.05556 4 5.11111 4 4C4 2.88889 4.38889 1.94444 5.16667 1.16667C5.94444 0.388889 6.88889 0 8 0C9.11111 0 10.0556 0.388889 10.8333 1.16667C11.6111 1.94444 12 2.88889 12 4C12 5.11111 11.6111 6.05556 10.8333 6.83333C10.0556 7.61111 9.11111 8 8 8ZM0 16V13.3333C0 12.9074 0.115741 12.5046 0.347222 12.125C0.578704 11.7454 0.898148 11.4259 1.30556 11.1667C2.32407 10.5741 3.40278 10.1204 4.54167 9.80556C5.68056 9.49074 6.83333 9.33333 8 9.33333C9.16667 9.33333 10.3194 9.49074 11.4583 9.80556C12.5972 10.1204 13.6759 10.5741 14.6944 11.1667C15.1019 11.4074 15.4213 11.7222 15.6528 12.1111C15.8843 12.5 16 12.9074 16 13.3333V16H0Z"
+                                        fill="white" />
+                                </svg>
+                                Dosen
+                            </a>
+                        </li>
+                        <li>
+                            <a href="{{ route('matakuliah') }}"
+                                @if (request()->routeIs('matakuliah')) class="{{ $btnClass }}" @endif>
+                                <svg width="15" height="17" viewBox="0 0 16 18" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M2.57143 18C1.85714 18 1.25 17.7539 0.75 17.2617C0.25 16.7695 0 16.1719 0 15.4688V2.53125C0 1.82812 0.25 1.23047 0.75 0.738281C1.25 0.246094 1.85714 0 2.57143 0H12.5714V14.625H2.57143C2.32857 14.625 2.125 14.7054 1.96071 14.8662C1.79643 15.027 1.71429 15.2262 1.71429 15.4638C1.71429 15.7015 1.79643 15.9023 1.96071 16.0664C2.125 16.2305 2.32857 16.3125 2.57143 16.3125H14.2857V1.6875H16V18H2.57143ZM3.09524 10.6875H4.28571L4.90476 8.97656H7.67333L8.28571 10.6875H9.47619L6.89548 3.9375H5.66667L3.09524 10.6875ZM5.2619 7.99219L6.26071 5.17969H6.30952L7.30952 7.99219H5.2619Z"
+                                        fill="white" />
+                                </svg>
+                                Matakuliah
+                            </a>
+                        </li>
+                        <li>
+                            <a href="{{ route('ruang') }}"
+                                @if (request()->routeIs('ruang')) class="{{ $btnClass }}" @endif>
+                                <svg width="15" height="15" viewBox="0 0 16 16" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M0 16V14.2857H1.71429V1.71429C1.71429 1.24286 1.88214 0.839286 2.21786 0.503572C2.55357 0.167858 2.95714 0 3.42857 0H12.5714C13.0429 0 13.4464 0.167858 13.7821 0.503572C14.1179 0.839286 14.2857 1.24286 14.2857 1.71429V14.2857H16V16H0ZM10.8571 14.2857H12.5714V1.71429H8.59524V0.952381C9.2619 1.06349 9.80556 1.38889 10.2262 1.92857C10.6468 2.46825 10.8571 3.0873 10.8571 3.78571V14.2857ZM7.13786 8.85714C7.37929 8.85714 7.58333 8.77548 7.75 8.61214C7.91667 8.44881 8 8.24643 8 8.005C8 7.76357 7.91833 7.55952 7.755 7.39286C7.59167 7.22619 7.38929 7.14286 7.14786 7.14286C6.90643 7.14286 6.70238 7.22452 6.53571 7.38786C6.36905 7.55119 6.28571 7.75357 6.28571 7.995C6.28571 8.23643 6.36738 8.44048 6.53071 8.60714C6.69405 8.77381 6.89643 8.85714 7.13786 8.85714Z"
+                                        fill="white" />
+                                </svg>
+                                Ruang
+                            </a>
+                        </li>
+                        <li>
+                            <a href="{{ route('fakultas') }}"
+                                @if (request()->routeIs('fakultas')) class="{{ $btnClass }}" @endif>
+                                <svg width="15" height="12" viewBox="0 0 16 12" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M14.6667 9.42857V4.5L8 7.71429L0 3.85714L8 0L16 3.85714V9.42857H14.6667ZM8 12L3.11111 9.64286V6.80357L8 9.16071L12.8889 6.80357V9.64286L8 12Z"
+                                        fill="white" />
+                                </svg>
+                                Fakultas
+                            </a>
+                        </li>
+                        <li>
+                            <a href="{{ route('prodi') }}"
+                                @if (request()->routeIs('prodi')) class="{{ $btnClass }}" @endif>
+                                <svg width="15" height="15" viewBox="0 0 16 16" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M6 9.5H10V8H6V9.5ZM6 7H13V5.5H6V7ZM6 4.5H13V3H6V4.5ZM4.5 13C4.0875 13 3.73437 12.8531 3.44062 12.5594C3.14687 12.2656 3 11.9125 3 11.5V1.5C3 1.0875 3.14687 0.734376 3.44062 0.440626C3.73437 0.146876 4.0875 0 4.5 0H14.5C14.9125 0 15.2656 0.146876 15.5594 0.440626C15.8531 0.734376 16 1.0875 16 1.5V11.5C16 11.9125 15.8531 12.2656 15.5594 12.5594C15.2656 12.8531 14.9125 13 14.5 13H4.5ZM1.5 16C1.0875 16 0.734375 15.8531 0.440625 15.5594C0.146875 15.2656 0 14.9125 0 14.5V3H1.5V14.5H13V16H1.5Z"
+                                        fill="white" />
+                                </svg>
+                                Prodi
+                            </a>
+                        </li>
+                        <li>
+                            <a href="{{ route('tahunAkademik') }}"
+                                @if (request()->routeIs('tahunAkademik')) class="{{ $btnClass }}" @endif>
+                                <svg width="15" height="17" viewBox="0 0 16 18" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M1.71429 18C1.24286 18 0.839286 17.832 0.503571 17.4961C0.167857 17.1602 0 16.7656 0 16.3125V3.9375C0 3.48437 0.167857 3.08984 0.503571 2.75391C0.839286 2.41797 1.24286 2.25 1.71429 2.25H3.42857V0H5.14286V2.25H10.8571V0H12.5714V2.25H14.2857C14.7571 2.25 15.1607 2.41797 15.4964 2.75391C15.8321 3.08984 16 3.48437 16 3.9375V16.3125C16 16.7656 15.8321 17.1602 15.4964 17.4961C15.1607 17.832 14.7571 18 14.2857 18H1.71429ZM1.71429 16.3125H14.2857V7.875H1.71429V16.3125Z"
+                                        fill="white" />
+                                </svg>
+                                Tahun Akademik
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+    </div>
+</section>
