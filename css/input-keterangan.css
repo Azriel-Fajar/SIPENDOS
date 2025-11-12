@@ -190,7 +190,8 @@ section .container .input-container form .button-container {
 section .container .input-container form .button-container button {
   height: 2.5rem;
   margin-top: 1rem;
-  width: 7rem;
+  width: max-content;
+  padding: 0 1rem;
   background-color: var(--bg-btn);
   border: none;
   outline: none;
