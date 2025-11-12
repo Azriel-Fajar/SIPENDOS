@@ -48,26 +48,35 @@ body {
 }
 
 .content .container .button-container {
-  width: max(35%, 200px);
+  width: 100%;
   display: flex;
   gap: 1rem;
 }
 
+.content .container .button-container input[type="radio"] {
+  display: none;
+}
+
 .content .container .button-container .btn {
   width: 50%;
+  height: 2.5rem;
+  display: grid;
+  place-items: center;
   border: 3px solid #007fff;
   border-radius: 0.5rem;
   color: #007fff;
   background-color: #ffffff;
   font-family: "poppins", sans-serif;
   font-weight: 600;
+  cursor: pointer;
+  transition: 0.1s ease;
 }
 
 .content .container .button-container .btn:hover {
   background-color: #d2e9ff;
 }
 
-.content .container .button-container .btn.active {
+.content .container .button-container input[type="radio"]:checked + label {
   background-color: #007fff;
   color: #ffffff;
 }

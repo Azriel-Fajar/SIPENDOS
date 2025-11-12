@@ -58,6 +58,7 @@ section .container .back-btn {
   font-weight: 600;
   text-decoration: none;
   box-shadow: 0 0 20px var(--shadow);
+  cursor: pointer;
   transition: 0.3s ease;
 }
 
@@ -74,18 +75,26 @@ section .container h1 {
 }
 
 section .container .input-container {
-  background-color: #fff;
+  margin-top: 1rem;
+  display: grid;
+  grid-template-rows: 1fr 3.5rem;
+  flex-direction: column;
   width: 100%;
   height: 100%;
-  margin-top: 1rem;
-  box-shadow: 0 0 20px var(--shadow-box);
-  border-radius: 1rem;
 }
 
 section .container .input-container form {
   width: 100%;
   height: 100%;
+}
+
+section .container .input-container .table-container {
+  background-color: #fff;
+  width: 100%;
+  height: 100%;
   padding: 0 0.5rem;
+  box-shadow: 0 0 20px var(--shadow-box);
+  border-radius: 1rem;
 }
 
 section .container .input-container form .input-header {
@@ -123,8 +132,6 @@ section .container .input-container form .input-row div input {
   padding: 0 0.5rem;
   font-size: 1rem;
   font-family: "poppins", sans-serif;
-  display: grid;
-  place-items: center;
 }
 
 section .container .input-container form .input-row div select {
@@ -139,6 +146,7 @@ section .container .input-container form .input-row div select {
   font-family: "poppins", sans-serif;
   display: grid;
   place-items: center;
+  cursor: pointer;
 }
 
 section .container .input-container form .input-row div button {
@@ -170,4 +178,31 @@ section
   div
   button[name="remove"]:hover {
   background-color: var(--bg-remove-btn-hover);
+}
+
+section .container .input-container form .button-container {
+  width: 100%;
+  height: max-content;
+  display: grid;
+  place-items: end;
+}
+
+section .container .input-container form .button-container button {
+  height: 2.5rem;
+  margin-top: 1rem;
+  width: 7rem;
+  background-color: var(--bg-btn);
+  border: none;
+  outline: none;
+  color: var(--light-bg);
+  font-family: "poppins", sans-serif;
+  font-size: 1rem;
+  border-radius: 0.5rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+section .container .input-container form .button-container button:hover {
+  background-color: var(--bg-btn-hover);
 }

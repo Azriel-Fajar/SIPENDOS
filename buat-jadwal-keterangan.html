@@ -206,11 +206,14 @@
         <!-- Content -->
         <section class="content" id="content">
             <div class="container">
-                <div class="button-container">
-                    <button class="btn btnAsdos">Asdos</button>
-                    <button class="btn btnDosen active">Dosen</button>
-                </div>
-                <form action="">
+                <form action="input-keterangan-jadwal.html">
+                    <div class="button-container">
+                        <input type="radio" name="pengajar" id="radio-asdos">
+                        <label for="radio-asdos" class="btn btnAsdos">Asdos</label>
+
+                        <input type="radio" name="pengajar" id="radio-dosen" checked>
+                        <label for="radio-dosen" class="btn btnDosen">Dosen</label>
+                    </div>
                     <select name="prodi" id="prodi">
                         <option selected disabled value="">- Pilih Program Studi -</option>
                         <option value="">Prodi</option>
