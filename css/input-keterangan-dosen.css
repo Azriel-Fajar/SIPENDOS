@@ -94,7 +94,7 @@ section .container .input-container .table-container {
   height: 100%;
   padding: 0 0.5rem;
   box-shadow: 0 0 20px var(--shadow-box);
-  border-radius: 1rem;
+  border-radius: 0.5rem;
 }
 
 section .container .input-container form .input-header {
